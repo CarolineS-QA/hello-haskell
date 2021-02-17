@@ -11,12 +11,14 @@ n = a `div` length xs
         xs = [1, 2, 3, 4, 5]
 
 --last takes the last element of the list
-last xs = xs !! (length xs - 1)
-last xs = drop(length xs - 1)
--- last xs = head (reverse xs) <-- more Haskelly way
+last0 xs = xs !! (length xs - 1)
+last1 xs = sum(drop(length xs - 1) xs)
+-- more Haskelly way
+last2 xs = head (reverse xs)
 
 
 --init takes initial segment (everything but last element)
-init xs = take y xs
+init0 xs = take y xs
            where y = length xs - 1
--- init xs = reverse (tail (reverse xs)) <-- more Haskelly way
+-- a more Haskelly way
+init1 xs = reverse (tail (reverse xs))

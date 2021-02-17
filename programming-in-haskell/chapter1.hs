@@ -1,6 +1,6 @@
 -- Chapter 1
 
-double (double 2)
+-- quad = double (double 2)
 
 --
 sum [] = 0
@@ -23,5 +23,12 @@ qs [] = []
 qs (x:xs) = qs smaller ++ [x] ++ qs larger
             where
                 smaller = [a | a <- xs, a <= x]
+                larger = [b | b <- xs, b > x]
+
+-- would kill duplicates
+qs [] = []
+qs (x:xs) = qs smaller ++ [x] ++ qs larger
+            where
+                smaller = [a | a <- xs, a < x]
                 larger = [b | b <- xs, b > x]
 
