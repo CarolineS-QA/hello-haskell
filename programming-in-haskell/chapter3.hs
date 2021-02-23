@@ -45,6 +45,36 @@ take -- is a curried function
 
 {- Chapter 3 - Excercises -}
 
-{-
+['a', 'b', 'c'] :: [Char]
 
--}
+('a', 'b', 'c') :: (Char,Char,Char)
+
+[(False, '0'), (True, '1')] :: [(Bool, Char)] 
+
+([True, False], ['0','1']) :: ([Bool], [Char])
+
+[tail, init, reverse] :: [[a] -> [a]]
+
+--
+:
+bools = [False, True, False, True]
+
+nums = [[3, 4], [1, 2, 3, 4::Int]]
+
+add1 a b c = a + b + c::Int
+add2 a b c = (a::Int) + b + c
+
+
+add3 :: Int -> Int -> Int -> Int
+add3 x y z = z + y + z
+
+{- In repl
+
+:{
+addX :: Int -> Int -> Int -> Int
+addX x y z = x+y+z
+:}
+
+:t addX
+
+-} 

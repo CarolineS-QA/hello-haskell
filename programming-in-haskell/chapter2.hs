@@ -15,6 +15,7 @@ last0 xs = xs !! (length xs - 1)
 last1 xs = sum(drop(length xs - 1) xs)
 -- more Haskelly way
 last2 xs = head (reverse xs)
+last3 xs = head . reverse
 
 
 --init takes initial segment (everything but last element)
