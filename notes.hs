@@ -18,3 +18,7 @@
 
 -- :reload also :r
 -- :load
+
+-- Haskell has no parameters
+
+-- :qfizz buzz without if statements / pattern matching or guards... into formulas...
